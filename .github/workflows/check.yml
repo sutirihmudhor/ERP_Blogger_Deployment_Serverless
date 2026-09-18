@@ -1,0 +1,20 @@
+name: Validate ERP API source
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --check api/health/index.js
+      - run: node --check api/auth/google/start.js
+      - run: node --check api/auth/google/callback.js
+      - run: node --check api/transactions/index.js
+      - run: node --check api/transactions/'[id].js'
+      - run: node --check lib/monthly-db.js
