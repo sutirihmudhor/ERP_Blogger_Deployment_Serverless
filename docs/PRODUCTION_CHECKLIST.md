@@ -1,0 +1,21 @@
+# Production checklist
+
+- [ ] GitHub repository created.
+- [ ] `.env` excluded from Git.
+- [ ] Vercel project linked to GitHub.
+- [ ] Production domain/API HTTPS active.
+- [ ] Google OAuth redirect URI exactly matches production callback.
+- [ ] Blogger API enabled in Google Cloud.
+- [ ] `BLOG_ID` set.
+- [ ] `GOOGLE_CLIENT_ID` set.
+- [ ] `GOOGLE_CLIENT_SECRET` set as server secret.
+- [ ] One-time OAuth completed.
+- [ ] `GOOGLE_REFRESH_TOKEN` stored as server secret.
+- [ ] `ALLOWED_ORIGINS` set to the exact Blogger origin.
+- [ ] `/api/health` returns `ok: true`.
+- [ ] Test GET monthly data.
+- [ ] Test POST transaction.
+- [ ] Test PUT transaction.
+- [ ] Test DELETE (soft delete).
+- [ ] Verify Blogger post `ERP|DATA|YYYY-MM`.
+- [ ] Do not put secrets into Blogger JavaScript.
