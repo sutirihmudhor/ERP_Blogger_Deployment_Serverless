@@ -1,0 +1,12 @@
+{
+  "name": "erp-blogger-serverless-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "googleapis": "^160.0.0"
+  }
+}
